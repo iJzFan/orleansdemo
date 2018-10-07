@@ -1,0 +1,11 @@
+C:\Users\Administrator\RiderProjects\esdemo\Grains\obj\Debug\netstandard2.0\Grains.csprojAssemblyReference.cache
+C:\Users\Administrator\RiderProjects\esdemo\Grains\obj\Debug\netstandard2.0\Grains.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\RiderProjects\esdemo\Grains\obj\Debug\netstandard2.0\Grains.AssemblyInfoInputs.cache
+C:\Users\Administrator\RiderProjects\esdemo\Grains\obj\Debug\netstandard2.0\Grains.AssemblyInfo.cs
+C:\Users\Administrator\RiderProjects\esdemo\Grains\bin\Debug\netstandard2.0\Grains.deps.json
+C:\Users\Administrator\RiderProjects\esdemo\Grains\bin\Debug\netstandard2.0\Grains.dll
+C:\Users\Administrator\RiderProjects\esdemo\Grains\bin\Debug\netstandard2.0\Grains.pdb
+C:\Users\Administrator\RiderProjects\esdemo\Grains\obj\Debug\netstandard2.0\Grains.dll
+C:\Users\Administrator\RiderProjects\esdemo\Grains\obj\Debug\netstandard2.0\Grains.pdb
+C:\Users\Administrator\RiderProjects\esdemo\Grains\obj\Debug\netstandard2.0\Grains.csproj.OrleansCodeGenInputs.cache
+C:\Users\Administrator\RiderProjects\esdemo\Grains\obj\Debug\netstandard2.0\Grains.orleans.g.cs

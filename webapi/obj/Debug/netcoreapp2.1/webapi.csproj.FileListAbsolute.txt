@@ -1,0 +1,17 @@
+C:\Users\Administrator\RiderProjects\esdemo\webapi\bin\Debug\netcoreapp2.1\webapi.deps.json
+C:\Users\Administrator\RiderProjects\esdemo\webapi\bin\Debug\netcoreapp2.1\webapi.runtimeconfig.json
+C:\Users\Administrator\RiderProjects\esdemo\webapi\bin\Debug\netcoreapp2.1\webapi.runtimeconfig.dev.json
+C:\Users\Administrator\RiderProjects\esdemo\webapi\bin\Debug\netcoreapp2.1\webapi.dll
+C:\Users\Administrator\RiderProjects\esdemo\webapi\bin\Debug\netcoreapp2.1\webapi.pdb
+C:\Users\Administrator\RiderProjects\esdemo\webapi\obj\Debug\netcoreapp2.1\webapi.csprojAssemblyReference.cache
+C:\Users\Administrator\RiderProjects\esdemo\webapi\obj\Debug\netcoreapp2.1\webapi.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\RiderProjects\esdemo\webapi\obj\Debug\netcoreapp2.1\webapi.RazorAssemblyInfo.cache
+C:\Users\Administrator\RiderProjects\esdemo\webapi\obj\Debug\netcoreapp2.1\webapi.RazorAssemblyInfo.cs
+C:\Users\Administrator\RiderProjects\esdemo\webapi\obj\Debug\netcoreapp2.1\webapi.AssemblyInfoInputs.cache
+C:\Users\Administrator\RiderProjects\esdemo\webapi\obj\Debug\netcoreapp2.1\webapi.AssemblyInfo.cs
+C:\Users\Administrator\RiderProjects\esdemo\webapi\obj\Debug\netcoreapp2.1\webapi.RazorTargetAssemblyInfo.cache
+C:\Users\Administrator\RiderProjects\esdemo\webapi\obj\Debug\netcoreapp2.1\webapi.dll
+C:\Users\Administrator\RiderProjects\esdemo\webapi\obj\Debug\netcoreapp2.1\webapi.pdb
+C:\Users\Administrator\RiderProjects\esdemo\webapi\bin\Debug\netcoreapp2.1\Grains.dll
+C:\Users\Administrator\RiderProjects\esdemo\webapi\bin\Debug\netcoreapp2.1\Grains.pdb
+C:\Users\Administrator\RiderProjects\esdemo\webapi\obj\Debug\netcoreapp2.1\webapi.csproj.CopyComplete
