@@ -1,56 +1,66 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Grains;
 using Microsoft.AspNetCore.Mvc;
 using Orleans;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+using WebApi.Grains;
+using WebApi.Models;
 
-namespace webapi.Controllers
+namespace WebApi.Controllers
 {
-    [Route("api/[controller]")]
-    [ApiController]
-    public class ValuesController : ControllerBase
-    {
-        private readonly IClusterClient _client;
-        
-        public ValuesController(IClusterClient client)
-        {
-            _client = client;
-        }
-        
-        
-        // GET api/values
-        [HttpGet]
-        public ActionResult<IEnumerable<string>> Get()
-        {
-            return new string[] {"value1", "value2"};
-        }
+	[Route("api/[controller]")]
+	public class ValuesController : Controller
+	{
+		private readonly IClusterClient _client;
 
-        // GET api/values/5
-        [HttpGet("{id}")]
-        public async Task<object> Get(int id)
-        {
-            var userGrain = _client.GetGrain<IUserGrain>(id, "");
-            return new {Info=await userGrain.GetInfo(),Key= userGrain.GetGrainIdentity()};
-        }
+		public ValuesController(IClusterClient client)
+		{
+			_client = client;
+		}
 
-        // POST api/values
-        [HttpPost]
-        public void Post([FromBody] string value)
-        {
-        }
+		[HttpGet("[action]/{id}")]
+		public async Task<object> GetInfo(long id)
+		{
+			var userGrain = _client.GetGrain<IUserGrain>(id);
+			return await userGrain.GetInfo();
+		}
 
-        // PUT api/values/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
-        {
-        }
+		[HttpGet("[action]/{id}")]
+		public async Task<object> UpdateInfo(long id, string name, int age)
+		{
+			var userGrain = _client.GetGrain<IUserGrain>(id);
+			return await userGrain.UpdateInfo(new UserInfo { Name = name, Age = age });
+		}
 
-        // DELETE api/values/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
-        {
-        }
-    }
+		[HttpGet("[action]")]
+		public async Task<object> ATM(long from, long to, uint amount)
+		{
+			var atm = _client.GetGrain<IATMGrain>(0);
+			
+			try
+			{
+				await atm.Transfer(from, to, amount);
+			}
+			catch (Exception ex)
+			{
+				return ex.InnerException.Message;
+			}
+
+			var fromBalance = await _client.GetGrain<IAccountGrain>(from).GetBalance();
+			var toBalance = await _client.GetGrain<IAccountGrain>(to).GetBalance();
+			
+			return new Dictionary<string, uint>()
+			{
+				["User" + from + " Balance"] = fromBalance,
+				["User" + to + " Balance"] = toBalance,
+			};
+		}
+
+		[HttpGet("[action]/{id}")]
+		public async Task<object> GetAccountInfo(long id)
+		{
+			var userGrain = _client.GetGrain<IUserGrain>(id);
+			return await userGrain.GetBalance();
+		}
+	}
 }
