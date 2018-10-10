@@ -6,7 +6,7 @@ namespace WebApi.Grains
 {
     public interface IUserGrain:IGrainWithIntegerKey
     {
-        Task<UserInfo> GetInfo();
+        ValueTask<UserInfo> GetInfo();
 		Task<UserInfo> UpdateInfo(UserInfo info);
 		Task<uint> GetBalance();
 	}
