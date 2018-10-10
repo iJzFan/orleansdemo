@@ -41,7 +41,7 @@ namespace WebApi.Controllers
 			{
 				await atm.Transfer(from, to, amount);
 			}
-			catch (Exception ex)
+			catch (Exception ex)when(ex.InnerException is InvalidOperationException)
 			{
 				return ex.InnerException.Message;
 			}

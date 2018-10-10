@@ -20,12 +20,12 @@ namespace WebApi.Services
 					parts.AddApplicationPart(typeof(Grains.IUserGrain).Assembly).WithReferences()).EnableDirectClient()
 					.AddMongoDBGrainStorageAsDefault(options =>
 					{
-						options.ConnectionString = "mongodb://localhost/OrleansTestApp";
+						options.ConnectionString = "mongodb://mongo01/OrleansTestApp";
 					})
 					.ConfigureLogging(x =>
 					{
 						x.AddConsole();
-						x.SetMinimumLevel(LogLevel.Information);
+						x.SetMinimumLevel(LogLevel.Warning);
 					})
 					.UseDashboard(x =>
 					{

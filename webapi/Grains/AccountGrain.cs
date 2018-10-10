@@ -22,7 +22,6 @@ namespace WebApi.Grains
         async Task IAccountGrain.Deposit(uint amount)
         {
             await _balance.PerformUpdate(x => x.Value += amount);
-            //return Task.CompletedTask;
         }
 
         async Task IAccountGrain.Withdraw(uint amount)
@@ -35,7 +34,6 @@ namespace WebApi.Grains
                 }
                 return x.Value -= amount;
             });
-            //return Task.CompletedTask;
         }
 
         Task<uint> IAccountGrain.GetBalance()
