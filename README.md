@@ -2,10 +2,10 @@
 
 ## co-hosting
 
-## derectclient
+## directclient
   
 ## mongdb storage
   
 ## dashboard
   
-## transations
+## transactions
